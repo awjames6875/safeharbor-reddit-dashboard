@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mission Control · Safe Harbor</title>
+<style>
+  :root { --navy:#1E3A5F; --teal:#2A7A6E; --cream:#F5F1E8; --border:#ddd6c8; --warn:#9A3412; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'Segoe UI',system-ui,sans-serif; background:var(--cream); color:#1a1a1a; padding-bottom:60px; }
+  .topbar { background:var(--navy); color:#fff; padding:20px 24px; text-align:center; }
+  .topbar h1 { font-size:24px; } .topbar .date { opacity:.7; font-size:14px; }
+  .wrap { max-width:860px; margin:24px auto 0; padding:0 20px; }
+  .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
+  .tile { background:#fff; border:1px solid var(--border); border-radius:14px; padding:16px; text-align:center; }
+  .tile-num { font-size:30px; font-weight:800; color:var(--teal); }
+  .tile-label { font-size:13px; font-weight:700; color:var(--navy); margin-top:2px; }
+  .tile-note { font-size:12px; color:#6b7280; margin-top:4px; }
+  .warn .tile-num { color:var(--warn); }
+  h2 { font-size:15px; text-transform:uppercase; letter-spacing:1px; color:#6b7280; margin:28px 4px 10px; }
+  table { width:100%; background:#fff; border:1px solid var(--border); border-radius:12px; border-collapse:separate; border-spacing:0; overflow:hidden; font-size:14px; }
+  th,td { padding:8px 12px; text-align:left; border-bottom:1px solid var(--border); }
+  th { background:var(--navy); color:#fff; font-size:12px; } tr:last-child td { border-bottom:none; }
+  ul { background:#fff; border:1px solid var(--border); border-radius:12px; padding:14px 14px 14px 32px; font-size:15px; line-height:1.9; }
+  .dim { color:#6b7280; font-size:13px; }
+</style></head><body>
+<div class="topbar"><h1>Mission Control</h1><div class="date">Tuesday, July 07, 2026</div></div>
+<div class="wrap">
+  <h2>The number that matters</h2>
+  <div class="tiles">
+    <div class="tile"><div class="tile-num">2.5%</div><div class="tile-label">AI citation rate</div><div class="tile-note">2 of 80 · Red Rover report (baseline) · baseline 2.5%</div></div>
+    <div class="tile"><div class="tile-num">3 / 1</div><div class="tile-label">Blogs live / pending</div><div class="tile-note">published on site / awaiting approval</div></div>
+    <div class="tile"><div class="tile-num">0</div><div class="tile-label">Original posts this month</div><div class="tile-note">target: 2–4, always disclosed</div></div>
+  </div>
+  <h2>Today's pipeline</h2>
+  <div class="tiles">
+    <div class="tile"><div class="tile-num">206</div><div class="tile-label">Scraped</div><div class="tile-note"></div></div>
+    <div class="tile"><div class="tile-num">179</div><div class="tile-label">Kept</div><div class="tile-note"></div></div>
+    <div class="tile"><div class="tile-num">11</div><div class="tile-label">Priority (target-query)</div><div class="tile-note"></div></div>
+    <div class="tile"><div class="tile-num">0</div><div class="tile-label">Competitor mentions</div><div class="tile-note"></div></div>
+    <div class="tile"><div class="tile-num">10/1/0</div><div class="tile-label">Funnel T/M/B</div><div class="tile-note"></div></div>
+  </div>
+  <h2>9-to-1 ratio check</h2>
+  <div class="tiles">
+    <div class="tile"><div class="tile-num">40</div><div class="tile-label">Value-only keepers</div><div class="tile-note"></div></div>
+    <div class="tile warn"><div class="tile-num">139</div>
+      <div class="tile-label">Brand-eligible</div><div class="tile-note">over 10% brand-eligible — lean value-only</div></div>
+  </div>
+  <h2>Citation history (Room 9)</h2>
+  <table><tr><th>Date</th><th>Cited</th><th>Rate</th><th>Source</th></tr><tr><td>2026-07-06</td><td>2 / 80</td><td><b>2.5%</b></td><td>Red Rover report (baseline)</td></tr></table>
+  <h2>Top questions people keep asking (next blog topics)</h2>
+  <ul><li>"Do you suddenly remember stuff from the past for no reason randomly? how to deal with this?" <span class="dim">(r/REDDITORSINRECOVERY, seen 2x)</span></li><li>"How to deal with medical burnout" <span class="dim">(r/breakingmom, seen 1x)</span></li><li>"Tell me I can just throw his sentimental crap away?" <span class="dim">(r/breakingmom, seen 1x)</span></li><li>"Are all men shitty?" <span class="dim">(r/breakingmom, seen 1x)</span></li><li>"How to deal with lost connections" <span class="dim">(r/REDDITORSINRECOVERY, seen 1x)</span></li></ul>
+  <h2>Last 14 runs</h2>
+  <table><tr><th>Date</th><th>Scraped</th><th>Kept</th><th>Drafted</th><th>Priority</th><th>Competitor</th></tr><tr><td>2026-07-07</td><td>206</td><td>179</td><td>5</td><td>11</td><td>0</td></tr></table>
+</div></body></html>
