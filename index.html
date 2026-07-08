@@ -269,4 +269,17 @@ window.REDDIT_DATA = {
     document.getElementById('panel-' + i).classList.remove('open');
     const pct = Math.round((done/total)*100);
     document.getElementById('progress').style.width = pct + '%';
-    document.getElementById('done-
+    document.getElementById('done-count').textContent = done;
+    document.getElementById('ready-count').textContent = total - done;
+    if (done === total) document.getElementById('alldone').classList.add('show');
+    toast('Marked as done — nice work!');
+  }
+  function toast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg; t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2600);
+  }
+  render();
+</script>
+</body>
+</html>
