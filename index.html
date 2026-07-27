@@ -265,10 +265,10 @@ window.REDDIT_DATA = {
     let priorityShown = false, regularShown = false;
     let html = '';
     posts.forEach((p, i) => {
-      if (p.priority && !priorityShown) { html += '<div class="section-label">Most important — do these first</div>'; priorityShown = true; }
+      if (p.priority && !priorityShown) { html += '<div class="section-label">Most important: do these first</div>'; priorityShown = true; }
       if (!p.priority && !regularShown) { html += '<div class="section-label">Also good to do</div>'; regularShown = true; }
       const ruleClass = p.ruleType === 'tooyoung' ? 'rule-line warn' : 'rule-line';
-      const factBlock = p.fact ? '<div class="fact-line"><b>Real fact you can use (we checked — it\'s true):</b>' + p.fact + '</div>' : '';
+      const factBlock = p.fact ? '<div class="fact-line"><b>Real fact you can use (we checked, it\'s true):</b>' + p.fact + '</div>' : '';
       const funnelBadge = p.funnel ? ' <span class="card-tag funnel">' + p.funnel + '</span>' : '';
       const f = p.format;
       const formatBadge = f ? ' <span class="card-tag">' + [f.tone, f.length_band + ' (~' + f.avg_words + ' words)', f.structure, (f.links_present ? 'links ok' : 'no links in thread')].join(' · ') + '</span>' : '';
@@ -330,7 +330,7 @@ window.REDDIT_DATA = {
         range.selectNodeContents(box);
         const sel = window.getSelection();
         sel.removeAllRanges(); sel.addRange(range);
-        toast('Press Ctrl+C (or Cmd+C) to copy — text is selected');
+        toast('Press Ctrl+C (or Cmd+C) to copy. Text is selected');
       }
     };
     if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -367,7 +367,7 @@ window.REDDIT_DATA = {
     document.getElementById('done-count').textContent = done;
     document.getElementById('ready-count').textContent = total - done;
     if (done === total) document.getElementById('alldone').classList.add('show');
-    toast('Marked as done — nice work!');
+    toast('Marked as done. Nice work!');
   }
   function toast(msg) {
     const t = document.getElementById('toast');
